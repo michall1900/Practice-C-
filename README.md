@@ -5,9 +5,7 @@ This repository contains my personal solutions to the assignments from the
 
 ## Structure
 
-Each assignment is located in its own folder:
-/AssignmentPart3
-/AssignmentPart4
+Each assignment is located in its own folder: AssignmentPart3, AssignmentPart4 ...
 
 As I progress through the course, new assignment folders will be added and committed to this repository.
 
