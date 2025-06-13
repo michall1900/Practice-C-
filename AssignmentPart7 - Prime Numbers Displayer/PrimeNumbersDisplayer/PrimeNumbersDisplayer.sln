@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbersDisplayer", "PrimeNumbersDisplayer\PrimeNumbersDisplayer.csproj", "{568FCC19-4BAA-4C4F-8B27-6DCB2A87DEF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{568FCC19-4BAA-4C4F-8B27-6DCB2A87DEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568FCC19-4BAA-4C4F-8B27-6DCB2A87DEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568FCC19-4BAA-4C4F-8B27-6DCB2A87DEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568FCC19-4BAA-4C4F-8B27-6DCB2A87DEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96F62650-6113-4F01-9605-EE1F72E90D52}
+	EndGlobalSection
+EndGlobal
