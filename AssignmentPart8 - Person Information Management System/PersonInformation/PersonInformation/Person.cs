@@ -64,14 +64,15 @@ namespace PersonInformation {
                     "Name can't be null or empty");
                 string[] splitName = value.Split(' ');
                 string[] realSplitName = new string[splitName.Length];
-                for (int i = 0, j = 0; i < splitName.Length; i++)
+                int realNameLength = 0;
+                for (int i = 0; i < splitName.Length; i++)
                 {
                     if (!String.IsNullOrWhiteSpace(splitName[i]))
                     {
-                        realSplitName[j++] = capitalizeWord(splitName[i]);
+                        realSplitName[realNameLength++] = capitalizeWord(splitName[i]);
                     }
                 }
-                _name = String.Join(' ', realSplitName);
+                _name = String.Join(' ', realSplitName[..realNameLength]);
             }
         }
 
