@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace PersonInformation.Utilities {
     public static class InputValidator {
 
@@ -19,9 +14,10 @@ namespace PersonInformation.Utilities {
         }
         public static int GetPositiveInteger()
         {
-            return GetIntInRange(0, int.MaxValue, "The number you enter is not a positive integer.");
+            return ReadIntegerWithinRange(0, int.MaxValue, 
+                "The number you enter is not a positive integer.");
         }
-        public static int GetIntInRange(int min, int max, string errorMessage)
+        public static int ReadIntegerWithinRange(int min, int max, string errorMessage)
         {
             string? inputStr = Console.ReadLine();
             int input = int.Parse(inputStr);
@@ -32,7 +28,20 @@ namespace PersonInformation.Utilities {
         public static void CheckIfIntInRange(int input, int min, int max, string errorMessage)
         {
             if (input < min || input > max)
-                throw new ArgumentOutOfRangeException(errorMessage);
+                throw new ArgumentException(errorMessage);
+        }
+
+        public static void ValidateAge(int age)
+        {
+            CheckIfIntInRange(age, 0, 120,
+                "Person's age must be a positive integer and less than or equal to 120");
+        }
+
+        public static int GetAge()
+        {
+            Console.Write("Enter Person Age: ");
+            return ReadIntegerWithinRange(0, 120,
+                "Person's age must be a positive integer and less than or equal to 120");
         }
     }
 }

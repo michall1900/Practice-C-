@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace PersonInformation.Utilities {
     public static class HandleError {
         public static void RunWithValidation(Action action)
@@ -13,15 +8,12 @@ namespace PersonInformation.Utilities {
                 action();
             }
             catch (Exception ex) when
-                (ex is ArgumentNullException ||
-                ex is FormatException ||
+                (ex is FormatException ||
                 ex is OverflowException ||
-                ex is ArgumentOutOfRangeException)
+                ex is ArgumentException)
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
-
     }
 }

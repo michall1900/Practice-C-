@@ -21,9 +21,7 @@ namespace PersonInformation {
             Console.Write("Enter Person Name: ");
             string name = Console.ReadLine();
             InputValidator.CheckIfNoneEmptyOrWhiteSpaceString(name);
-            Console.Write("Enter Person Age: ");
-            int age = InputValidator.GetIntInRange(0, 120,
-                "Person's age must be a positive integer and less than or equal to 120");
+            int age = InputValidator.GetAge();
             Console.Write("Enter Person Address: ");
             string address = Console.ReadLine();
             Person person = new Person(id, age, name, address);
