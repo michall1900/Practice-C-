@@ -28,18 +28,21 @@ The game continues until only one player remains — the winner.
 6. When only one player remains, they are declared the winner.
 
 ### Example
+```text
 Welcome to Hot Potato Game!
 
-```text
+
 Please enter a list of names (seperated by commas)
-Alice, Bob, Charlie, Dana
+Alice, Bob, Charlie, Dave, Eve
 Do you want that players will eliminate in a random sequence (y/n)?n
 Enter the elimination number: 3
-Player Bob eliminated!
-Player Dana eliminated!
-Player Alice eliminated!
 
-The winner is Charlie!
+Player Charlie eliminated!
+Player Alice eliminated!
+Player Eve eliminated!
+Player Bob eliminated!
+
+The winner is Dave!
 ```
 ## Project Structure
 - Program.cs – Entry point of the application. Starts the controller.
