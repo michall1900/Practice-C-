@@ -45,8 +45,8 @@ namespace HotPotatoGame
 
             while (_players.Count > 1)
             {
-                int eliminatedSequence = GetEliminatedSequence();
-                for (int i = 1; i < eliminatedSequence; i++)
+                UpdateEliminatedSequence();
+                for (int i = 1; i < _eliminatedSequence; i++)
                 {
                     string currentPlayer = _players.Dequeue();
                     _players.Enqueue(currentPlayer);
@@ -83,14 +83,18 @@ namespace HotPotatoGame
         }
 
         /// <summary>
-        /// Gets the number of passes before a player is eliminated.
-        /// Returns a random number if random sequence is enabled, otherwise uses the set elimination number.
+        /// Updates the elimination sequence number for the current round.
+        /// If random sequence is enabled, sets the elimination number to a 
+        /// random value between 1 and the number of players (inclusive).
+        /// Otherwise, retains the previously set elimination number.
         /// </summary>
-        /// <returns>The number of passes before elimination.</returns>
-        private int GetEliminatedSequence()
+        private void UpdateEliminatedSequence()
         {
-            return ((!_isRandomSequence) ? _eliminatedSequence :
-                _random.Next(1, _players.Count + 1));
+            if(_isRandomSequence)
+            {
+                _eliminatedSequence = _random.Next(1, _players.Count + 1);
+            }
+                
         }
 
         /// <summary>

@@ -11,7 +11,7 @@
         /// <param name="input">The string to validate.</param>
         /// <param name="realName">The name of the parameter being validated.</param>
         /// <exception cref="ArgumentNullException">Thrown when <paramref name="input"/> is null, empty, or white-space.</exception>
-        public static void CheckIfNullOrEmptyString(string input, string realName)
+        public static void CheckIfNullOrEmptyString(string? input, string realName)
         {
             if (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input))
             {
@@ -27,7 +27,7 @@
         /// <exception cref="ArgumentException">
         /// Thrown when <paramref name="input"/> is not a valid integer or is less than or equal to zero.
         /// </exception>
-        public static void CheckIfPositiveInt(string input)
+        public static void CheckIfPositiveInt(string? input)
         {
             int result;
             if (!int.TryParse(input, out result))
