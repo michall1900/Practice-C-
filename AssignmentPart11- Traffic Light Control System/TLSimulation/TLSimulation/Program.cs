@@ -1,6 +1,6 @@
-﻿using TLSimulation;
+﻿
 
-namespace TrafficLightSimulation {
+namespace TLSimulation {
     /// <summary>
     /// Entry point for the Traffic Light Simulation application.
     /// Prompts the user for the number of cycles and runs the traffic 
@@ -15,9 +15,9 @@ namespace TrafficLightSimulation {
         public static void Main(string[] _)
         {
             Console.Write("Enter the number of cycles: ");
-            int numOfCycles;
+            
 
-            if(!int.TryParse(Console.ReadLine(), out numOfCycles) ||
+            if(!int.TryParse(Console.ReadLine(), out int numOfCycles) ||
                 numOfCycles <=0 )
             {
                 Console.Error.WriteLine("Invalid integer, you should " +
